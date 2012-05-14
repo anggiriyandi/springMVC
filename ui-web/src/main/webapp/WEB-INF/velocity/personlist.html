@@ -1,0 +1,36 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+      
+        <table border="0" cellpadding="0" cellspacing="2" style="width: 100%">
+            <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th></th>
+            </tr>
+            
+        #foreach($person in $personList)
+        <tr>
+            <td style="width: 40%">$person.nama</td>
+            <td style="width: 40%">$person.email</td>
+            <td style="width: 20%">
+                <a href="personform?person_id=$person.id">edit</a>
+                <a href="persondetail?person_id=$person.id">view</a>
+                <a href="delete?person_id=$person.id">delete</a>  
+            </td>
+        </tr>
+        #end
+        </table>
+        <br>
+        
+        <a href="personform">create person</a>
+    </body>
+</html>

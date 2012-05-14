@@ -1,0 +1,33 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <form method="POST">
+            <input type="hidden" name="id" value="$!person.Id">
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td> #springBind("person.nama")
+                        <input type="text" name="nama" value="$!person.nama" ></td>
+                    <td>#springShowErrors("<br>" "")</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>#springBind("person.email")
+                        <input type="text" name="email" value="$!person.email"></td>
+                    <td>#springShowErrors("<br>" "")</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Save"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
